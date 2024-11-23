@@ -1,0 +1,107 @@
+
+body{
+   background-color: #f7ecde;
+}
+
+h1{
+   font-family: "Pacifico", cursive;
+   font-weight: 500;
+   font-size: 50px;
+}
+::selection{
+   background-color:rgb(254, 194, 96); 
+
+}
+
+.layer{
+   position: absolute;
+   width: 20%;
+   height: 20px;
+   background-color:rgb(254, 194, 96); 
+   right: 50%;
+   left: 50%;
+   translate: -50%;
+   bottom: 83%;
+   z-index: -1;
+   transition: height 0.3s
+}
+h1:hover + .layer {
+ height: 40px;
+ 
+ }
+
+h1::after{
+   content: "";
+position: absolute;
+left: 50%;
+right: 50%;
+translate: -50%;
+width: 95%;
+border-bottom: 3px dotted black;
+top: 180%;
+}
+
+header h2{
+   font-family: "Righteous", sans-serif;
+   font-size: 25px;
+   background-image: linear-gradient(to right, #3ca55c, #b1ac49);
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.myBtn{
+   color: white;
+   width: 150px;
+   background-color: #d1512d;
+}
+
+.myBtn::after{
+   content: "";
+   position: absolute;
+   left: 50%;
+   right: 50%;
+   translate: -50%;
+   width: 85%;
+   border-bottom: 3px dotted black;
+   top: 105%;
+}
+
+
+#myBtn{
+   background-color: #9eb23b;
+}
+
+.lightBoxContainer{
+   inset: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+}
+.lightBox{
+   width: 450px;
+   height: 250px;
+}
+
+.circles .one{
+   width: 25px;
+   height: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

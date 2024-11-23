@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/all.min.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="container text-center">
+    <div class="  container py-4 my-5   ">
+        <h1 id="dd" class="position-relative  ">Bookmarker</h1>
+        <div class="layer"></div>
+    </div>
+<h2> <i class="fa-solid fa-bookmark pe-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark ps-2"></i></h2>
+</header>
+
+<section class="inputs fw-bold position-relative">
+    <div class=" container  mb-3 my-5">
+        <label for="siteName" class="form-label"><i class="fa-solid fa-book-bookmark me-2 ms-3 "></i>Site Name</label>
+        <input oninput="validateInputs(this)" type="text" class="form-control mb-2" id="siteName" placeholder="Bookmark Name">
+        <div class="alert alert-danger p-1 d-none ">
+           Name shold start with a capital letter and be atleast three letters.
+        </div>
+
+        <label for="webUrl" class="form-label"><i class="fa-solid fa-link  me-2 ms-3"></i>Site URL</label>
+        <input oninput="validateInputs(this)" type="url" class="form-control mb-2 " id="webUrl" placeholder="Website Url">
+        <div class="alert alert-danger p-1  d-none">
+          url should be like this (https://routeacademy.github.io/Bookmarker/)
+        </div>
+      <div class="container text-center p-2"> 
+         <button onclick="addSite()" type="button" class="myBtn btn  ">Submit</button></div>
+      </div>
+</section>
+<div class="lightBoxContainer position-fixed d-flex align-items-center justify-content-center d-none ">
+    <div class="lightBox bg-white rounded-2 ">
+        <div class="circles-all d-flex justify-content-between my-3 mx-3">
+<div class="circles d-flex  ">
+    <span class="one rounded-circle bg-danger me-2 "></span>
+    <span class="one rounded-circle bg-warning me-2 "></span>
+    <span class="one rounded-circle bg-success me-2"></span>
+   
+</div>
+<i id="close" class="fa-solid fa-xmark fs-3"></i>
+</div>
+<p class="mx-4 h5 pb-3">Site Name or Url is not valid, Please follow the rules below :</p>
+<p class="mx-4"><i class="fa-regular fa-circle-right fs-5" style="color: #c40808;"></i> Site name must contain at least 3 characters</p>
+<p class="mx-4"><i class="fa-regular fa-circle-right fs-5" style="color: #c40808;"></i> Site URL must be a valid one</p>
+    </div>
+</div>
+
+<div class="container bg-white my-5 rounded-1 ">
+    <div class="row">
+        <div class="col-lg-3">
+        <div class="inner text-center p-1">
+            <h2 class="h6 fw-bold">index</h2>
+        </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="inner text-center p-1">
+                <h3 class="h6 fw-bold">Website Name</h3>
+            </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="inner text-center p-1">
+                    <h3 class="h6 fw-bold">Visit</h3>
+                </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="inner text-center p-1">
+                        <h3 class="h6 fw-bold">Delete</h3>
+                    </div>
+                    </div>
+    </div>
+
+        <div id="myRow" class="row ">
+           
+        </div>
+        </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
